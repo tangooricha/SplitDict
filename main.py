@@ -51,6 +51,7 @@ if __name__ == "__main__":
 			f2data = []
 			f3data = []
 			fdataline = ""
+			print "Processing data!"
 			while(True):
 				fdataline = f1.readline()
 				if not fdataline:
@@ -62,7 +63,9 @@ if __name__ == "__main__":
 					f1data = string.split(fdataline, maxsplit=1)
 				f2data.append(f1data[0])
 				f3data.append(f1data[1])
-			f2data = sorted(list(set(f2data)))
-			f3data = sorted(list(set(f3data)))
+			f2data = sorted(f2data)
+			f3data = sorted(f3data)
+			print "Outputting ", t2
 			f2.write(string.join(f2data, "\n"))
+			print "Outputting ", t3
 			f3.write(string.join(f3data, "\n"))
